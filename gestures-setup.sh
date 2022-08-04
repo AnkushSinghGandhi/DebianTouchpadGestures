@@ -1,15 +1,13 @@
 sudo gpasswd -a $USER input
 read -p "restart and run the script again then press enter"
+
 echo "updating and upgrading"
 sudo apt upgrade && sudo apt update
 echo ' '
+
 echo "installing various packages to enable gestures"
 cd ~
-sudo apt install wmctrl python3 python3-setuptools xdotool python3-gi libinput-tools
-
-sudo apt-get install -y ninja-build
-sudo apt-get -y install meson
-sudo apt-get install -y gettext
+sudo apt-get install -y wmctrl python3 python3-setuptools xdotool python3-gi libinput-tools ninja-build meson gettext
 
 cd Downloads
 wget https://github.com/bulletmark/libinput-gestures/archive/master.zip
